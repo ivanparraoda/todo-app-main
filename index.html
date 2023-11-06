@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <header class="container-header">
+      <div class="hero-img">
+        <picture>
+          <source
+            media="(min-width:650px)"
+            srcset="./images/bg-desktop-light.jpg"
+            id="bg-desktop"
+          />
+          <source
+            media="(min-width:465px)"
+            srcset="./images/bg-mobile-light.jpg"
+            id="bg-mobile"
+          />
+          <img src="./images/bg-mobile-light.jpg" alt="sas" id="default" />
+        </picture>
+      </div>
+    </header>
+    <div class="displaycontent">
+      <div class="title-toggle">
+        <h1>TODO</h1>
+        <div class="container_icons">
+          <a href="#" id="dark"><i class="fa-solid fa-moon fa-lg"></i></a>
+          <a href="#" id="light"><i class="fa-solid fa-sun fa-lg"></i></a>
+        </div>
+      </div>
+      <form id="addForm">
+        <input type="text" id="elementInput" />
+        <input type="submit" name="sub" id="submit" value="submit" />
+      </form>
+      <main class="container">
+        <!-- input and title -->
+        <ul class="todo-container">
+          <li class="item active" draggable="true">
+            <button class="btn" id="btn_select"></button>
+            <p class="p">Hello</p>
+            <button class="delete">
+              <img src="./images/icon-cross.svg" alt="" class="del" />
+            </button>
+          </li>
+        </ul>
+        <div class="filter">
+          <p class="items-left"><span id="data_item"> </span> Items left</p>
+          <button id="clearcompleted">Clear Completed</button>
+        </div>
+      </main>
+      <div class="filter-options">
+        <button id="allbtn">All</button>
+        <button id="activebtn">Active</button>
+        <button id="completedbtn">Completed</button>
+      </div>
+    </div>
+    <footer>
+      <p class="instructions">Drag and drop to reorder list</p>
+    </footer>
+    <script src="js.js"></script>
+  </body>
+</html>
