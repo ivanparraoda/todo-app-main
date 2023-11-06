@@ -33,7 +33,6 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   background-color: var(--bg-main-clr);
   color: var(--font-cl);
-  scrollbar-color: red yellow;
 }
 
 .hero-img img {
